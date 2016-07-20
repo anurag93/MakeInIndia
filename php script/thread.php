@@ -13,8 +13,8 @@ define('HOST','localhost');
  		$username=$_GET['username'];
  		$thread=$_GET['thread'];
  		$thread_id=$_GET['thread_id'];
-
- 		$sql="INSERT INTO `comments`(`thread_id`,`username`, `threads`) VALUES ('$thread_id','$username','$thread')";
+        $comment_id=$_GET['comment_id']
+ 		$sql="INSERT INTO `comments`(`thread_id`,`username`, `threads`,`comment_id`) VALUES ('$thread_id','$username','$thread','$comment_id')";
         $result=mysqli_query($con,$sql);
  	}
  	//for updating threads
