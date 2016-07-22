@@ -8,12 +8,12 @@ define('HOST','localhost');
  if($_SERVER['REQUEST_METHOD']=='GET')
  {
  	//for entering the threads
- 	if($_GET['editThread']==null)
+ 	if($_GET['editThread']!=0)
  	{
  		$username=$_GET['username'];
  		$thread=$_GET['thread'];
  		$thread_id=$_GET['thread_id'];
-        $comment_id=$_GET['comment_id']
+        $comment_id=$_GET['comment_id'];
  		$sql="INSERT INTO `comments`(`thread_id`,`username`, `threads`,`comment_id`) VALUES ('$thread_id','$username','$thread','$comment_id')";
         $result=mysqli_query($con,$sql);
  	}

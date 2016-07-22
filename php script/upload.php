@@ -5,7 +5,7 @@
  define('DB','digital_india');
  
  $con=mysqli_connect(HOST,USER,PASS,DB) or die('Unable to connect');
-	if($_SERVER['REQUEST METHOD']=='GET'){
+	if($_SERVER['REQUEST_METHOD']=='GET'){
 		
 		if($_GET['name']==null)
 		{
